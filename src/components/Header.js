@@ -31,6 +31,9 @@ const Header = ({ mobileMenuOpen, toggleMobileMenu, closeMobileMenu }) => {
               <a href="#projects" className="header__link">Projects</a>
             </li>
             <li className="header__link-wrapper">
+              <a href="#blog" className="header__link">Blog</a>
+            </li>
+            <li className="header__link-wrapper">
               <a href="#contact" className="header__link">Contact</a>
             </li>
           </ul>
@@ -59,6 +62,9 @@ const Header = ({ mobileMenuOpen, toggleMobileMenu, closeMobileMenu }) => {
             </li>
             <li className="header__sm-menu-link">
               <a href="#projects" onClick={closeMobileMenu}>Projects</a>
+            </li>
+            <li className="header__sm-menu-link">
+              <a href="#blog" onClick={closeMobileMenu}>Blog</a>
             </li>
             <li className="header__sm-menu-link">
               <a href="#contact" onClick={closeMobileMenu}>Contact</a>

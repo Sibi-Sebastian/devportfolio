@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="main-footer__row main-footer__row-2">
             <h4 className="heading heading-sm text-lt">{PERSONAL_INFO.name}</h4>
             <p className="main-footer__short-desc">
-              {PERSONAL_INFO.title} passionate about building scalable backend systems and robust APIs
+              Sibi Sebastian is a {PERSONAL_INFO.title} passionate about building scalable backend systems and robust APIs
             </p>
           </div>
         </div>

@@ -44,6 +44,45 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+/* Global Container System */
+.main-container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+@media only screen and (max-width: 56.25em) {
+  .main-container {
+    padding: 0 1.5rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .main-container {
+    padding: 0 1rem;
+  }
+}
+
+/* Prevent horizontal overflow */
+* {
+  max-width: 100%;
+}
+
+img, 
+video, 
+iframe, 
+embed, 
+object {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure no element exceeds viewport width */
+.app {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -78,6 +117,19 @@ textarea {
 @media only screen and (max-width: 37.5em) {
   .heading-primary {
     font-size: 4.5rem;
+  }
+}
+
+.heading-secondary {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-top: 1rem;
+  color: #fff;
+  font-weight: 600;
+}
+@media only screen and (max-width: 37.5em) {
+  .heading-secondary {
+    font-size: 2rem;
   }
 }
 
@@ -157,12 +209,6 @@ textarea {
   letter-spacing: 1px;
 }
 
-.main-container {
-  max-width: 120rem;
-  margin: auto;
-  width: 92%;
-}
-
 .btn {
   background: #fff;
   color: #333;
@@ -235,6 +281,8 @@ textarea {
   min-height: 80rem;
   max-height: 120rem;
   position: relative;
+  overflow: hidden;
+  width: 100%;
 }
 @media only screen and (max-width: 37.5em) {
   .home-hero {
@@ -245,9 +293,16 @@ textarea {
 .home-hero__socials {
   position: absolute;
   top: 50%;
+  left: 2rem;
   border: 2px solid #eee;
   border-left: 2px solid #eee;
   transform: translateY(-50%);
+  z-index: 10;
+}
+@media only screen and (max-width: 75em) {
+  .home-hero__socials {
+    left: 1rem;
+  }
 }
 @media only screen and (max-width: 56.25em) {
   .home-hero__socials {
@@ -291,6 +346,21 @@ textarea {
   transform: translate(-50%, -50%);
   max-width: 90rem;
   width: 92%;
+  text-align: center;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 56.25em) {
+  .home-hero__content {
+    width: 95%;
+    padding: 0 1rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .home-hero__content {
+    width: 98%;
+    padding: 0 0.5rem;
+  }
 }
 @media only screen and (max-width: 37.5em) {
   .home-hero__content {
@@ -416,69 +486,198 @@ textarea {
 }
 
 .contact {
-  background: linear-gradient(135deg, rgba(120, 67, 233, 0.9), rgba(95, 50, 212, 0.9)),
-    url(../public/assets/svg/common-bg.svg);
-  background-size: cover;
-  background-position: center;
+  background: #f8f9fa;
+  padding: 8rem 0;
 }
+
+.contact__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 6rem;
+  align-items: start;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 56.25em) {
+  .contact__content {
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+  }
+}
+
+.contact__info {
+  padding: 2rem 0;
+}
+
+.contact__info-title {
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.contact__info-desc {
+  font-size: 1.7rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact__detail {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+.contact__detail:hover {
+  transform: translateY(-2px);
+}
+
+.contact__detail-icon {
+  font-size: 2.4rem;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  border-radius: 50%;
+}
+
+.contact__detail-content h4 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.contact__detail-content a {
+  font-size: 1.5rem;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.contact__detail-content a:hover {
+  color: #7843e9;
+}
+
 .contact__form-container {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background: white;
+  background: #fff;
   padding: 4rem;
-  margin-top: 6rem;
-  max-width: 80rem;
-  text-align: right;
-  width: 95%;
-  border-radius: 5px;
-  margin: 5rem auto 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 @media only screen and (max-width: 37.5em) {
   .contact__form-container {
-    padding: 3rem;
+    padding: 3rem 2rem;
   }
 }
-.contact__form-field {
-  margin-bottom: 4rem;
-}
-@media only screen and (max-width: 37.5em) {
-  .contact__form-field {
-    margin-bottom: 3rem;
-  }
-}
-.contact__form-label {
-  color: #666;
-  font-size: 1.4rem;
-  letter-spacing: 1px;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  display: block;
-  text-align: left;
-}
-.contact__form-input {
-  color: #333;
-  padding: 2rem;
-  width: 100%;
-  border: 1px solid #ebebeb;
-  font-size: 1.6rem;
-  letter-spacing: 0px;
-  background: #f0f0f0;
-  border-radius: 5px;
+
+.contact__status {
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.5rem;
   font-weight: 600;
 }
+
+.contact__status--sending {
+  background: #e3f2fd;
+  color: #1565c0;
+  border: 1px solid #bbdefb;
+}
+
+.contact__status--success {
+  background: #e8f5e8;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.contact__status--error {
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+}
+
+.contact__form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .contact__form-row {
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+  }
+}
+
+.contact__form-field {
+  margin-bottom: 2rem;
+}
+
+.contact__form-input {
+  width: 100%;
+  padding: 1.5rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  color: #333;
+  background: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit;
+}
+
+.contact__form-input:focus {
+  outline: none;
+  border-color: #7843e9;
+  box-shadow: 0 0 0 3px rgba(120, 67, 233, 0.1);
+}
+
 .contact__form-input::placeholder {
   color: #999;
-  font-weight: 600;
-  font-size: 1.6rem;
+  font-weight: 400;
 }
+
+.contact__form-textarea {
+  resize: vertical;
+  min-height: 12rem;
+}
+
 .contact__btn {
-  width: 30%;
-  padding: 2rem 4rem;
+  background: #7843e9;
+  color: #fff;
+  padding: 1.5rem 3rem;
+  border: none;
+  border-radius: 8px;
   font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
 }
-@media only screen and (max-width: 37.5em) {
-  .contact__btn {
-    width: 100%;
-  }
+
+.contact__btn:hover:not(:disabled) {
+  background: #6c3ce6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(120, 67, 233, 0.3);
+}
+
+.contact__btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .header {
@@ -752,5 +951,390 @@ textarea {
   to {
     opacity: 0;
     top: 27px;
+  }
+}
+
+/* Blog Section */
+.blog {
+  background: #fafafa;
+}
+
+.blog__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-gap: 5rem;
+  margin-top: 5rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .blog__content {
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+  }
+}
+
+.blog__post {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.blog__post:hover {
+  transform: translateY(-3px);
+}
+
+.blog__post-img-cont {
+  width: 100%;
+  height: 25rem;
+  overflow: hidden;
+}
+
+.blog__post-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.blog__post:hover .blog__post-img {
+  transform: scale(1.05);
+}
+
+.blog__post-content {
+  padding: 3rem;
+}
+
+.blog__post-title {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.blog__post-date {
+  font-size: 1.4rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+.blog__post-excerpt {
+  font-size: 1.6rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.blog__post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.blog__post-tag {
+  background: #f0f0f0;
+  color: #555;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.blog__post-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Blog Post Detail */
+.blog-post {
+  background: #fff;
+  padding: 8rem 0;
+}
+
+.blog-post__content {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.blog-post__title {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.blog-post__meta {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.blog-post__date,
+.blog-post__author {
+  font-size: 1.4rem;
+  color: #777;
+}
+
+.blog-post__img-cont {
+  width: 100%;
+  height: 40rem;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.blog-post__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-post__body {
+  margin-bottom: 4rem;
+}
+
+.blog-post__paragraph {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.blog-post__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.blog-post__tag {
+  background: #f0f0f0;
+  color: #555;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+/* Hero Profile Image */
+.home-hero__profile {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.home-hero__profile-img {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.home-hero__profile-img:hover {
+  transform: scale(1.05);
+}
+
+@media only screen and (max-width: 37.5em) {
+  .home-hero__profile-img {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+/* Additional overflow protection */
+.header__content,
+.home-hero__content,
+.about__content,
+.projects__content,
+.blog__content,
+.contact__content {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Social buttons boundary protection */
+.home-hero__socials {
+  max-width: 6rem;
+  max-height: 80vh;
+  overflow: hidden;
+}
+
+/* Ensure social buttons stay within safe area */
+@media only screen and (max-width: 90em) {
+  .home-hero__socials {
+    left: 1rem;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  .home-hero__socials {
+    left: 0.5rem;
+  }
+}
+
+/* Hide social buttons on very small screens to prevent overlap */
+@media only screen and (max-width: 48em) {
+  .home-hero__socials {
+    display: none;
+  }
+}
+
+/* Ensure text doesn't break container */
+.heading-primary,
+.heading-secondary,
+.heading-sec__main,
+.text-primary,
+.about__content-details-para,
+.projects__row-content-desc,
+.blog__post-excerpt,
+.contact__info-desc {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Responsive images and media */
+.home-hero__social-icon,
+.header__logo-img,
+.projects__row-img,
+.blog__post-img,
+.contact__detail-icon {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Grid container overflow protection */
+.projects__content,
+.blog__content,
+.contact__content {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Form elements overflow protection */
+.contact__form-input,
+.contact__form-textarea {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Navigation overflow protection */
+.header__links,
+.header__sm-menu-links {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Ensure buttons don't overflow */
+.btn,
+.contact__btn {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+/* Optional: Visual debugging borders (remove in production) */
+/*
+.main-container {
+  border: 2px dashed #ff0000;
+}
+
+section {
+  border: 1px solid #00ff00;
+}
+
+.header__content,
+.home-hero__content,
+.about__content,
+.projects__content,
+.blog__content,
+.contact__content {
+  border: 1px solid #0000ff;
+}
+*/
+
+/* Production-ready container boundaries */
+.app {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Ensure all sections respect container boundaries */
+section {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Header boundary protection */
+.header {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.header__content {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+/* Hero section boundary */
+.home-hero {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Ensure mobile menu doesn't overflow */
+.header__sm-menu {
+  width: 100%;
+  max-width: 100vw;
+  left: 0;
+  right: 0;
+}
+/* Final safety net for all absolutely positioned elements */
+.home-hero [class*="absolute"],
+.home-hero__socials,
+.home-hero__mouse-scroll-cont,
+.home-hero__content {
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+/* Ensure social buttons never overlap with main content */
+@media only screen and (min-width: 56.26em) and (max-width: 75em) {
+  .home-hero__content {
+    margin-left: 3rem; /* Give space for social buttons */
+  }
+}
+
+/* Additional mobile safety */
+@media only screen and (max-width: 48em) {
+  .home-hero__content {
+    margin-left: 0;
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+/* Prevent any element from creating horizontal scroll */
+* {
+  max-width: 100%;
+}
+
+img, video, iframe, embed, object, canvas, svg {
+  max-width: 100% !important;
+  height: auto;
+}
+
+/* Container query fallback for very wide screens */
+@media only screen and (min-width: 140rem) {
+  .main-container {
+    max-width: 130rem;
+  }
+  
+  .home-hero__socials {
+    left: calc((100vw - 130rem) / 2 + 2rem);
   }
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FORM_CONFIG } from '../constants/data';
+import { FORM_CONFIG, PERSONAL_INFO } from '../constants/data';
 
 const Contact = () => {
   const [formStatus, setFormStatus] = useState('');
@@ -37,93 +37,99 @@ const Contact = () => {
     <section id="contact" className="contact sec-pad">
       <div className="main-container">
         <h2 className="heading heading-sec heading-sec__mb-med">
-          <span className="heading-sec__main heading-sec__main--lt">Contact</span>
-          <span className="heading-sec__sub heading-sec__sub--lt">
-            Feel free to reach out if you're looking for a developer, have a question, or just want to connect
+          <span className="heading-sec__main">Contact</span>
+          <span className="heading-sec__sub">
+            Let's discuss your next project or opportunity
           </span>
         </h2>
-        <div className="contact__form-container">
-          {formStatus === 'sending' && (
-            <div style={{
-              padding: '1.5rem',
-              marginBottom: '2rem',
-              backgroundColor: '#d1ecf1',
-              color: '#0c5460',
-              borderRadius: '5px',
-              textAlign: 'center',
-              fontSize: '1.6rem'
-            }}>
-              ⏳ Sending your message...
-            </div>
-          )}
-          {formStatus === 'success' && (
-            <div style={{
-              padding: '1.5rem',
-              marginBottom: '2rem',
-              backgroundColor: '#d4edda',
-              color: '#155724',
-              borderRadius: '5px',
-              textAlign: 'center',
-              fontSize: '1.6rem'
-            }}>
-              ✓ Message sent successfully! I'll get back to you soon.
-            </div>
-          )}
-          {formStatus === 'error' && (
-            <div style={{
-              padding: '1.5rem',
-              marginBottom: '2rem',
-              backgroundColor: '#f8d7da',
-              color: '#721c24',
-              borderRadius: '5px',
-              textAlign: 'center',
-              fontSize: '1.6rem'
-            }}>
-              ✗ Oops! Something went wrong. Please try again.
-            </div>
-          )}
-          <form className="contact__form" onSubmit={handleSubmit}>
-            <input type="hidden" name="subject" value={FORM_CONFIG.subject} />
-            <input type="hidden" name="from_name" value={FORM_CONFIG.fromName} />
+        
+        <div className="contact__content">
+          <div className="contact__info">
+            <h3 className="contact__info-title">Get In Touch</h3>
+            <p className="contact__info-desc">
+              I'm always interested in new opportunities and collaborations. 
+              Whether you have a project in mind or just want to connect, feel free to reach out.
+            </p>
             
-            <div className="contact__form-field">
-              <label className="contact__form-label" htmlFor="name">Name</label>
-              <input
-                required
-                placeholder="Enter Your Name"
-                type="text"
-                className="contact__form-input"
-                name="name"
-                id="name"
-              />
+            <div className="contact__details">
+              <div className="contact__detail">
+                <span className="contact__detail-icon">📧</span>
+                <div className="contact__detail-content">
+                  <h4>Email</h4>
+                  <a href={`mailto:${PERSONAL_INFO.email}`}>{PERSONAL_INFO.email}</a>
+                </div>
+              </div>
+              
+              <div className="contact__detail">
+                <span className="contact__detail-icon">📱</span>
+                <div className="contact__detail-content">
+                  <h4>Phone</h4>
+                  <a href={`tel:${PERSONAL_INFO.phone}`}>{PERSONAL_INFO.phone}</a>
+                </div>
+              </div>
             </div>
-            <div className="contact__form-field">
-              <label className="contact__form-label" htmlFor="email">Email</label>
-              <input
-                required
-                placeholder="Enter Your Email"
-                type="email"
-                className="contact__form-input"
-                name="email"
-                id="email"
-              />
-            </div>
-            <div className="contact__form-field">
-              <label className="contact__form-label" htmlFor="message">Message</label>
-              <textarea
-                required
-                cols="30"
-                rows="10"
-                className="contact__form-input"
-                placeholder="Enter Your Message"
-                name="message"
-                id="message"
-              ></textarea>
-            </div>
-            <button type="submit" className="btn btn--theme contact__btn">
-              Submit
-            </button>
-          </form>
+          </div>
+
+          <div className="contact__form-container">
+            {formStatus === 'sending' && (
+              <div className="contact__status contact__status--sending">
+                ⏳ Sending your message...
+              </div>
+            )}
+            {formStatus === 'success' && (
+              <div className="contact__status contact__status--success">
+                ✓ Message sent successfully! I'll get back to you soon.
+              </div>
+            )}
+            {formStatus === 'error' && (
+              <div className="contact__status contact__status--error">
+                ✗ Oops! Something went wrong. Please try again.
+              </div>
+            )}
+            
+            <form className="contact__form" onSubmit={handleSubmit}>
+              <input type="hidden" name="subject" value={FORM_CONFIG.subject} />
+              <input type="hidden" name="from_name" value={FORM_CONFIG.fromName} />
+              
+              <div className="contact__form-row">
+                <div className="contact__form-field">
+                  <input
+                    required
+                    placeholder="Your Name"
+                    type="text"
+                    className="contact__form-input"
+                    name="name"
+                    id="name"
+                  />
+                </div>
+                <div className="contact__form-field">
+                  <input
+                    required
+                    placeholder="Your Email"
+                    type="email"
+                    className="contact__form-input"
+                    name="email"
+                    id="email"
+                  />
+                </div>
+              </div>
+              
+              <div className="contact__form-field">
+                <textarea
+                  required
+                  rows="5"
+                  className="contact__form-input contact__form-textarea"
+                  placeholder="Your Message"
+                  name="message"
+                  id="message"
+                ></textarea>
+              </div>
+              
+              <button type="submit" className="btn btn--theme contact__btn" disabled={formStatus === 'sending'}>
+                {formStatus === 'sending' ? 'Sending...' : 'Send Message'}
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
