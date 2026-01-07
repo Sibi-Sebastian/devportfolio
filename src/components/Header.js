@@ -10,7 +10,7 @@ const Header = ({ mobileMenuOpen, toggleMobileMenu, closeMobileMenu }) => {
             {PERSONAL_INFO.profileImage ? (
               <img
                 src={PERSONAL_INFO.profileImage}
-                alt={PERSONAL_INFO.name}
+                alt="Sibi Sebastian – Freelance Software Developer"
                 className="header__logo-img"
               />
             ) : (

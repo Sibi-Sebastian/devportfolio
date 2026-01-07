@@ -1,0 +1,102 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Sibi Sebastian - Software Development Services",
+  "description": "Professional software development services by Sibi Sebastian - Experienced Full-Stack Developer in Karnataka, India. Specializing in web development, API development, and custom software solutions.",
+  "url": "https://sibisebastian.web.app",
+  "telephone": "7795146489",
+  "email": "sibisebastian013@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Karnataka",
+    "addressCountry": "India"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "12.9716",
+    "longitude": "77.5946"
+  },
+  "areaServed": [
+    {
+      "@type": "State",
+      "name": "Karnataka"
+    },
+    {
+      "@type": "Country", 
+      "name": "India"
+    }
+  ],
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": "12.9716",
+      "longitude": "77.5946"
+    },
+    "geoRadius": "1000000"
+  },
+  "priceRange": "$$",
+  "openingHours": "Mo-Su 09:00-18:00",
+  "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+  "currenciesAccepted": "INR, USD",
+  "founder": {
+    "@type": "Person",
+    "name": "Sibi Sebastian"
+  },
+  "employee": {
+    "@type": "Person",
+    "name": "Sibi Sebastian",
+    "jobTitle": "Full-Stack Software Developer"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Software Development Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Full-Stack Web Development",
+          "description": "Complete web application development using modern technologies like React.js, Node.js, and MERN Stack"
+        }
+      },
+      {
+        "@type": "Offer", 
+        "itemOffered": {
+          "@type": "Service",
+          "name": "API Development",
+          "description": "RESTful API development and integration services for web and mobile applications"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service", 
+          "name": "Database Development",
+          "description": "Database design, optimization, and management for MySQL and MongoDB"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "E-commerce Development", 
+          "description": "Custom e-commerce solutions and WordPress development"
+        }
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "10",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/sibi-sebastian-b71092220/",
+    "https://github.com/Sibi-Sebastian",
+    "https://x.com/sibi_sebastian_",
+    "https://www.instagram.com/sibi.sebastian_/"
+  ]
+}

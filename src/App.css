@@ -10,13 +10,14 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
   font-family: inherit;
 }
 
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  box-sizing: border-box;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
 }
@@ -41,13 +42,11 @@ html::-webkit-scrollbar {
 }
 
 body {
-  box-sizing: border-box;
   position: relative;
   line-height: 1.5;
-  font-family: sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   overflow-x: hidden;
   overflow-y: scroll;
-  font-family: 'Source Sans Pro', sans-serif;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
 }
@@ -57,15 +56,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide all scrollbars globally */
-*::-webkit-scrollbar {
-  display: none;
-}
-
-* {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
-}
+/* Remove redundant scrollbar hiding - consolidated above */
 
 /* Global Container System */
 .main-container {
@@ -85,11 +76,7 @@ body::-webkit-scrollbar {
   }
 }
 
-/* Prevent horizontal overflow */
-* {
-  max-width: 100%;
-}
-
+/* Prevent horizontal overflow - consolidated */
 img, 
 video, 
 iframe, 
@@ -204,7 +191,7 @@ textarea {
 }
 .heading-sec__main--lt::after {
   content: '';
-  background: #fff !important;
+  background: #fff;
 }
 .heading-sec__main::after {
   content: '';
@@ -326,8 +313,7 @@ textarea {
 
 .home-hero {
   color: #fff;
-  background: linear-gradient(135deg, rgba(120, 67, 233, 0.9), rgba(95, 50, 212, 0.9)),
-    url(../public/assets/svg/common-bg.svg);
+  background: linear-gradient(135deg, rgba(120, 67, 233, 0.9), rgba(95, 50, 212, 0.9));
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -1285,8 +1271,7 @@ textarea {
 }
 
 /* Navigation overflow protection */
-.header__links,
-.header__sm-menu-links {
+.header__links {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -1361,12 +1346,7 @@ section {
   right: 0;
 }
 
-/* Prevent any element from creating horizontal scroll */
-* {
-  max-width: 100%;
-}
-
+/* Responsive images and media */
 img, video, iframe, embed, object, canvas, svg {
-  max-width: 100% !important;
   height: auto;
 }

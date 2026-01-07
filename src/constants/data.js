@@ -4,14 +4,16 @@ export const PERSONAL_INFO = {
   initials: 'SS',
   email: 'sibisebastian013@gmail.com',
   phone: '7795146489',
-  title: 'Backend Developer',
-  tagline: 'Building scalable APIs and microservices that power modern applications',
-  description: 'Specialized in Node.js, Express, and SQL databases with 2+ years of experience building production-ready backend systems.',
+  title: 'Freelance Full-Stack Software Developer',
+  tagline: 'Experienced Software Developer in Karnataka, India - Building scalable web applications and APIs that power modern businesses',
+  description: 'Sibi Sebastian is an experienced Freelance Full-Stack Software Developer based in Karnataka, India, specializing in Node.js, React.js, MERN Stack, and API development. With 2+ years of professional experience, I help businesses build scalable web applications, robust backend systems, and modern user interfaces. Available for remote and on-site projects across India.',
   profileImage: '/assets/png/sibi-sebastian.png',
-  experience: '2+ Years Experience',
-  education: 'B.E. in AI & Machine Learning',
-  location: 'Available for Remote & On-site',
-  status: 'Open to Opportunities'
+  experience: '2+ Years Professional Experience',
+  education: 'B.E. in AI & Machine Learning from VTU',
+  location: 'Karnataka, India - Available Remote & On-site',
+  status: 'Open to Freelance Projects',
+  expertise: 'Full-Stack Development, API Development, Database Design, Web Applications',
+  serviceAreas: 'Karnataka, Bangalore, India - Remote Services Worldwide'
 };
 
 // Social Media Links
@@ -38,26 +40,41 @@ export const SOCIAL_LINKS = [
   }
 ];
 
-// Skills
+// Skills - Optimized for SEO keywords
 export const SKILLS = [
-  'Node.js',
-  'Express.js',
-  'JavaScript',
-  'SQL',
-  'MySQL',
-  'MongoDB',
-  'REST APIs',
-  'React.js',
-  'MERN Stack',
+  'Node.js Development',
+  'React.js Development', 
+  'Full-Stack Development',
+  'JavaScript Programming',
+  'MERN Stack Development',
+  'Express.js Framework',
+  'API Development',
+  'REST API Design',
+  'Database Development',
+  'MySQL Database',
+  'MongoDB Database',
+  'SQL Programming',
+  'Backend Development',
+  'Frontend Development',
+  'Web Development',
+  'Software Engineering',
+  'Computer Programming',
+  'Microservices Architecture',
+  'Authentication Systems',
+  'Database Design',
   'Unit Testing',
   'Integration Testing',
-  'Jest',
-  'Git',
-  'Hostinger',
-  'WordPress',
-  'Microservices',
-  'Authentication',
-  'Database Design'
+  'Jest Testing Framework',
+  'Git Version Control',
+  'WordPress Development',
+  'PHP Programming',
+  'Firebase Hosting',
+  'Hostinger Deployment',
+  'E-commerce Development',
+  'Responsive Web Design',
+  'Performance Optimization',
+  'SEO Implementation',
+  'Web Application Security'
 ];
 
 // Projects
@@ -88,10 +105,10 @@ export const PROJECTS = [
   }
 ];
 
-// About Me Content
+// About Me Content - SEO Optimized
 export const ABOUT_ME = {
-  intro: "Hey! I'm Sibi Sebastian and I'm a software developer specializing in Node.js and MERN Stack development. With a B.E. in Artificial Intelligence and Machine Learning from VTU, I've worked as a Backend Developer at Tackle-D Private Limited (IT Services and Consulting), where I built scalable APIs, managed databases, and deployed production applications.",
-  details: "As a dedicated software developer, Sibi Sebastian specializes in building robust backend systems using Node.js, Express, SQL (MySQL), and MongoDB. My expertise includes REST API development, database design, authentication systems, unit and integration testing with Jest, and deploying applications on Hostinger. I'm also proficient in React.js for full-stack MERN development. Feel free to contact me for backend development opportunities."
+  intro: "Hello! I'm Sibi Sebastian, an experienced Freelance Full-Stack Software Developer based in Karnataka, India. With a B.E. in Artificial Intelligence and Machine Learning from VTU and 2+ years of professional experience, I specialize in building scalable web applications using Node.js, React.js, and the MERN Stack. As a dedicated software engineer, I've worked as a Backend Developer at Tackle-D Private Limited, where I developed robust APIs, managed complex databases, and deployed production-ready applications that serve thousands of users.",
+  details: "As Sibi Sebastian, I offer comprehensive software development services across India, with expertise in full-stack web development, API development, database design, and modern web technologies. My technical skills include Node.js, Express.js, React.js, JavaScript, MySQL, MongoDB, REST API development, authentication systems, unit testing with Jest, and deployment on platforms like Firebase and Hostinger. Whether you're looking for the best software developer in Karnataka, an experienced full-stack engineer, or a reliable freelance developer for your next project, I'm here to help transform your ideas into powerful web applications. I'm available for both remote and on-site projects across India, bringing professional expertise and dedication to every development challenge."
 };
 
 // Blog Posts
