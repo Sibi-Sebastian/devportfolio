@@ -7,7 +7,7 @@ export const PERSONAL_INFO = {
   title: 'Backend Developer',
   tagline: 'Building scalable APIs and microservices that power modern applications',
   description: 'Specialized in Node.js, Express, and SQL databases with 2+ years of experience building production-ready backend systems.',
-  profileImage: '/assets/png/profilepic.png',
+  profileImage: '/assets/png/sibi-sebastian.png',
   experience: '2+ Years Experience',
   education: 'B.E. in AI & Machine Learning',
   location: 'Available for Remote & On-site',

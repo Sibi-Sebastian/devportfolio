@@ -30,9 +30,6 @@ const Hero = () => {
           </div>
         ))}
       </div>
-      <div className="home-hero__mouse-scroll-cont">
-        <div className="mouse"></div>
-      </div>
     </section>
   );
 };

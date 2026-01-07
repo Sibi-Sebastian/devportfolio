@@ -20,13 +20,7 @@ function App() {
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (mobileMenuOpen) {
-        setMobileMenuOpen(false);
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    // Mobile menu will stay open until manually closed
   }, [mobileMenuOpen]);
 
   return (
