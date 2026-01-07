@@ -270,7 +270,7 @@ textarea {
 }
 
 .sec-pad {
-  padding: 1rem 0;
+  padding: 8rem 0;
 }
 @media only screen and (max-width: 56.25em) {
   .sec-pad {
@@ -510,7 +510,7 @@ textarea {
 
 .contact {
   background: #f8f9fa;
-  padding: 1rem 0;
+  padding: 8rem 0;
 }
 
 .contact__content {
@@ -730,6 +730,7 @@ textarea {
   cursor: pointer;
   color: #333;
   transition: color 0.3s;
+  text-decoration: none;
 }
 .header__logo-container:hover {
   color: #7843e9;
@@ -834,8 +835,8 @@ textarea {
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
 }
 .header__sm-menu--active {
-  visibility: hidden;
-  opacity: 0;
+  visibility: visible;
+  opacity: 1;
 }
 @media only screen and (max-width: 37.5em) {
   .header__sm-menu--active {

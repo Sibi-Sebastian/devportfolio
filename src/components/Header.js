@@ -5,7 +5,7 @@ const Header = ({ mobileMenuOpen, toggleMobileMenu, closeMobileMenu }) => {
   return (
     <header className="header">
       <div className="header__content">
-        <div className="header__logo-container">
+        <a href="#home" className="header__logo-container">
           <div className="header__logo-img-cont">
             {PERSONAL_INFO.profileImage ? (
               <img
@@ -18,23 +18,23 @@ const Header = ({ mobileMenuOpen, toggleMobileMenu, closeMobileMenu }) => {
             )}
           </div>
           <span className="header__logo-sub">{PERSONAL_INFO.name}</span>
-        </div>
+        </a>
         <div className="header__main">
           <ul className="header__links">
             <li className="header__link-wrapper">
-              <span className="header__link">Home</span>
+              <a href="#home" className="header__link">Home</a>
             </li>
             <li className="header__link-wrapper">
-              <span className="header__link">About</span>
+              <a href="#about" className="header__link">About</a>
             </li>
             <li className="header__link-wrapper">
-              <span className="header__link">Projects</span>
+              <a href="#projects" className="header__link">Projects</a>
             </li>
             <li className="header__link-wrapper">
-              <span className="header__link">Blog</span>
+              <a href="#blog" className="header__link">Blog</a>
             </li>
             <li className="header__link-wrapper">
-              <span className="header__link">Contact</span>
+              <a href="#contact" className="header__link">Contact</a>
             </li>
           </ul>
           <div className="header__main-ham-menu-cont" onClick={toggleMobileMenu}>
@@ -55,19 +55,19 @@ const Header = ({ mobileMenuOpen, toggleMobileMenu, closeMobileMenu }) => {
         <div className="header__sm-menu-content">
           <ul className="header__sm-menu-links">
             <li className="header__sm-menu-link">
-              <span onClick={closeMobileMenu}>Home</span>
+              <a href="#home" onClick={closeMobileMenu}>Home</a>
             </li>
             <li className="header__sm-menu-link">
-              <span onClick={closeMobileMenu}>About</span>
+              <a href="#about" onClick={closeMobileMenu}>About</a>
             </li>
             <li className="header__sm-menu-link">
-              <span onClick={closeMobileMenu}>Projects</span>
+              <a href="#projects" onClick={closeMobileMenu}>Projects</a>
             </li>
             <li className="header__sm-menu-link">
-              <span onClick={closeMobileMenu}>Blog</span>
+              <a href="#blog" onClick={closeMobileMenu}>Blog</a>
             </li>
             <li className="header__sm-menu-link">
-              <span onClick={closeMobileMenu}>Contact</span>
+              <a href="#contact" onClick={closeMobileMenu}>Contact</a>
             </li>
           </ul>
         </div>
